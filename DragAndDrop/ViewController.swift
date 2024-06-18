@@ -16,8 +16,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // Do any additional setup after loading the view.
     collection.delegate = self
     collection.dataSource = self
-    collection.dragDelegate = self
-    collection.dropDelegate = self
   }
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -45,15 +43,3 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     print(indexPath)
   }
 }
-
-extension ViewController: UICollectionViewDragDelegate {
-  func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: any UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
-    let item = String(indexPath.row)
-    let itemProvider = NSItemProvider(object: item as NSString)
-    let dragItem = UIDragItem(itemProvider: itemProvider)
-    dragItem.localObject = item
-    return [dragItem]
-  }
-  
-}
-
