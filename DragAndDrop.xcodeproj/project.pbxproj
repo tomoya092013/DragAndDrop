@@ -56,31 +56,15 @@
 		9FF907A42C21AA8D00A3EF89 /* DragAndDrop */ = {
 			isa = PBXGroup;
 			children = (
-				9FF907BA2C21AB4200A3EF89 /* Controller */,
-				9FF907B92C21AB2F00A3EF89 /* View */,
 				9FF907A52C21AA8D00A3EF89 /* AppDelegate.swift */,
 				9FF907A72C21AA8D00A3EF89 /* SceneDelegate.swift */,
 				9FF907A92C21AA8D00A3EF89 /* ViewController.swift */,
-				9FF907AE2C21AA9100A3EF89 /* Assets.xcassets */,
 				9FF907AB2C21AA8D00A3EF89 /* Main.storyboard */,
+				9FF907AE2C21AA9100A3EF89 /* Assets.xcassets */,
 				9FF907B02C21AA9100A3EF89 /* LaunchScreen.storyboard */,
 				9FF907B32C21AA9100A3EF89 /* Info.plist */,
 			);
 			path = DragAndDrop;
-			sourceTree = "<group>";
-		};
-		9FF907B92C21AB2F00A3EF89 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		9FF907BA2C21AB4200A3EF89 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
