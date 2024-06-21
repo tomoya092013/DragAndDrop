@@ -65,12 +65,12 @@ extension ViewController: UICollectionViewDropDelegate {
   
   func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: any UICollectionViewDropCoordinator) {
     if coordinator.proposal.operation == .move {
-      guard let item = coordinator.items.first else { return }
-      guard let sourceIndex = item.sourceIndexPath else { return }
-      guard let destinationIndex = coordinator.destinationIndexPath else { return }
-      
-      guard let stringItem = item.dragItem.localObject as? String else { return }
-      guard let intItem = Int(stringItem) else { return }
+      guard let item = coordinator.items.first,
+            let sourceIndex = item.sourceIndexPath,
+            let destinationIndex = coordinator.destinationIndexPath,
+            let stringItem = item.dragItem.localObject as? String,
+            let intItem = Int(stringItem)
+      else { return }
       
       collectionView.performBatchUpdates({
         self.numberList.remove(at: sourceIndex.item)
